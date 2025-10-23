@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Rodríguez - Diseño Gráfico Estratégico</title>
+    <meta name="description" content="Diseño gráfico estratégico que impulsa marcas. John Alejandro Rodríguez - Especialista en identidad visual y UX/UI para empresas que buscan impacto real">
+    
+    <!-- Preconnect para optimización de fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS crítico inline para performance -->
+    <style>
+        /* CSS crítico para evitar FOUC (Flash of Unstyled Content) */
+        body { margin: 0; font-family: 'Inter', sans-serif; }
+        .navbar { position: fixed; top: 0; width: 100%; z-index: 1000; background: #FFFFFF; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .hero { padding-top: 80px; min-height: 100vh; }
+    </style>
+    
+    <!-- Enlace al archivo CSS principal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER/NAV - Navegación fija con CTA principal -->
+    <header class="navbar" id="navbar">
+        <nav class="nav-container">
+            <!-- Logo minimalista y memorable -->
+            <div class="nav-logo">
+                <a href="#hero" class="logo-link">JR Design</a>
+            </div>
+            
+            <!-- Navegación principal con smooth scroll -->
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link" data-section="hero">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-section="about">Sobre Mí</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#proyectos" class="nav-link" data-section="proyectos">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contacto" class="nav-link" data-section="contacto">Contacto</a>
+                </li>
+            </ul>
+            
+            <!-- CTA principal en la navegación -->
+            <a href="#contacto" class="nav-cta">Hablemos de tu proyecto</a>
+            
+            <!-- Menú hamburguesa para móviles -->
+            <button class="hamburger" id="hamburger" aria-label="Menú de navegación">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION - Primera impresión de alto impacto -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- Contenido principal del hero -->
+                <div class="hero-text">
+                    <!-- Titular de alto impacto que comunica valor -->
+                    <h1 class="hero-title">Diseño Gráfico Estratégico que Impulsa Marcas</h1>
+                    
+                    <!-- Elevator pitch profesional y conciso -->
+                    <p class="hero-subtitle">
+                        John Alejandro Rodríguez Calle<br>
+                        <span class="hero-role">Especialista en Identidad Visual y UX/UI</span>
+                    </p>
+                    
+                    <p class="hero-description">
+                        Transformo ideas complejas en experiencias visuales que conectan emocionalmente 
+                        con tu audiencia y generan resultados medibles para tu negocio.
+                    </p>
+                    
+                    <!-- CTAs estratégicamente posicionados -->
+                    <div class="hero-buttons">
+                        <a href="#proyectos" class="btn btn-primary" data-scroll="proyectos">
+                            Ver Proyectos Recientes
+                        </a>
+                        <a href="#contacto" class="btn btn-secondary" data-scroll="contacto">
+                            Consulta Gratuita
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Imagen profesional optimizada -->
+                <div class="hero-image">
+                    <img src="https://res.cloudinary.com/dxjxyu90m/image/upload/v1761182123/DISE%C3%91ADOR_GR%C3%81FICO_-_A_GRAPHIC_DESIGNER_grpm8l.jpg" 
+                         alt="John Alejandro Rodríguez - Diseñador Gráfico Estratégico" 
+                         class="profile-image"
+                         loading="eager" 
+                         width="400" 
+                         height="400">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACERCA DE MÍ & SKILLS - Propuesta de valor profesional -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <!-- Trayectoria profesional concisa -->
+                <div class="about-text">
+                    <h2 class="section-title">La Propuesta de Valor</h2>
+                    <p class="about-description">
+                        Con más de 6 años transformando marcas, me especializo en crear 
+                        identidades visuales que no solo se ven bien, sino que generan 
+                        conexión emocional y resultados de negocio medibles.
+                    </p>
+                    
+                    <!-- Experiencias más relevantes -->
+                    <div class="experience-highlights">
+                        <div class="experience-item">
+                            <h3>Diseñador Gráfico Senior</h3>
+                            <p class="company">Estudio Creativo Digital</p>
+                            <p class="period">2022 - Presente</p>
+                            <p class="achievement">+40% incremento en conversión de clientes</p>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <h3>Especialista en Branding</h3>
+                            <p class="company">Agencia Branding Pro</p>
+                            <p class="period">2020 - 2022</p>
+                            <p class="achievement">+25 marcas reposicionadas exitosamente</p>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <h3>Consultor UX/UI</h3>
+                            <p class="company">Freelance</p>
+                            <p class="period">2018 - 2020</p>
+                            <p class="achievement">+60 proyectos de diseño digital</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stack de habilidades en formato de píldoras -->
+                <div class="skills-section">
+                    <h3 class="skills-title">Stack de Habilidades</h3>
+                    <div class="skills-grid">
+                        <!-- Habilidades estratégicas -->
+                        <div class="skill-category">
+                            <h4>Estrategia</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Brand Strategy</span>
+                                <span class="skill-tag">Design Thinking</span>
+                                <span class="skill-tag">User Research</span>
+                                <span class="skill-tag">Market Analysis</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Herramientas de diseño -->
+                        <div class="skill-category">
+                            <h4>Herramientas</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Figma</span>
+                                <span class="skill-tag">Adobe Creative Suite</span>
+                                <span class="skill-tag">Sketch</span>
+                                <span class="skill-tag">Principle</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Especialidades -->
+                        <div class="skill-category">
+                            <h4>Especialidades</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">UI/UX Design</span>
+                                <span class="skill-tag">Brand Identity</span>
+                                <span class="skill-tag">Print & Packaging</span>
+                                <span class="skill-tag">Motion Graphics</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Metodologías -->
+                        <div class="skill-category">
+                            <h4>Metodologías</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Agile Design</span>
+                                <span class="skill-tag">Prototyping</span>
+                                <span class="skill-tag">A/B Testing</span>
+                                <span class="skill-tag">Design Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS - Case Studies con modal interactivo -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2 class="section-title">Case Studies Estratégicos</h2>
+            <p class="section-subtitle">Proyectos que demuestran impacto real en el negocio del cliente</p>
+            
+            <!-- Grid de proyectos con masonry layout -->
+            <div class="projects-grid">
+                <!-- Proyecto 1 - Rebranding Fintech -->
+                <div class="project-card" data-project="fintech-rebrand">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/400/300?random=1" 
+                             alt="Rebranding para Startup de Fintech" 
+                             loading="lazy"
+                             width="400" 
+                             height="300">
+                        <div class="project-overlay">
+                            <span class="project-cta">Ver Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Rebranding para Startup de Fintech</h3>
+                        <p class="project-description">
+                            Reposicionamiento completo de marca que aumentó la confianza del usuario 
+                            y triplicó las conversiones en 6 meses.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Brand Strategy</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Fintech</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 - E-commerce App -->
+                <div class="project-card" data-project="ecommerce-app">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/400/250?random=2" 
+                             alt="App Móvil E-commerce" 
+                             loading="lazy"
+                             width="400" 
+                             height="250">
+                        <div class="project-overlay">
+                            <span class="project-cta">Ver Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">App Móvil E-commerce</h3>
+                        <p class="project-description">
+                            Rediseño de experiencia de compra que redujo el abandono del carrito 
+                            en un 35% y aumentó las ventas móviles.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Mobile UX</span>
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Conversion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 - Campaña Corporativa -->
+                <div class="project-card" data-project="corporate-campaign">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/400/350?random=3" 
+                             alt="Campaña Corporativa" 
+                             loading="lazy"
+                             width="400" 
+                             height="350">
+                        <div class="project-overlay">
+                            <span class="project-cta">Ver Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Campaña Corporativa Multichannel</h3>
+                        <p class="project-description">
+                            Estrategia visual integral que unificó la comunicación 
+                            de marca en todos los touchpoints del cliente.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Brand Campaign</span>
+                            <span class="tag">Print Design</span>
+                            <span class="tag">Digital</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 - SaaS Dashboard -->
+                <div class="project-card" data-project="saas-dashboard">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/400/280?random=4" 
+                             alt="Dashboard SaaS" 
+                             loading="lazy"
+                             width="400" 
+                             height="280">
+                        <div class="project-overlay">
+                            <span class="project-cta">Ver Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Dashboard SaaS B2B</h3>
+                        <p class="project-description">
+                            Rediseño de interfaz compleja que mejoró la usabilidad 
+                            y redujo el tiempo de onboarding en un 50%.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">SaaS Design</span>
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">B2B UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 5 - Packaging Sostenible -->
+                <div class="project-card" data-project="sustainable-packaging">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/400/320?random=5" 
+                             alt="Packaging Sostenible" 
+                             loading="lazy"
+                             width="400" 
+                             height="320">
+                        <div class="project-overlay">
+                            <span class="project-cta">Ver Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Packaging Sostenible</h3>
+                        <p class="project-description">
+                            Diseño de packaging que comunica valores sostenibles 
+                            y aumentó las ventas en el segmento eco-conscious.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Packaging</span>
+                            <span class="tag">Sustainability</span>
+                            <span class="tag">Brand Values</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Proyecto 6 - Brand Identity -->
+                <div class="project-card" data-project="brand-identity">
+                    <div class="project-image">
+                        <img src="https://picsum.photos/400/260?random=6" 
+                             alt="Identidad de Marca" 
+                             loading="lazy"
+                             width="400" 
+                             height="260">
+                        <div class="project-overlay">
+                            <span class="project-cta">Ver Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Identidad de Marca Completa</h3>
+                        <p class="project-description">
+                            Desarrollo de identidad visual desde cero que posicionó 
+                            a la empresa como líder en su sector.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Brand Identity</span>
+                            <span class="tag">Logo Design</span>
+                            <span class="tag">Visual System</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE CASE STUDY - Se abre al hacer clic en proyecto -->
+    <div class="case-study-modal" id="case-study-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Cerrar modal">
+                <span>&times;</span>
+            </button>
+            
+            <div class="case-study-content" id="case-study-content">
+                <!-- El contenido se carga dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACTO - Sección de conversión optimizada -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">¿Listo para Impulsar tu Marca?</h2>
+            <p class="section-subtitle">Hablemos de tu proyecto y cómo puedo ayudarte a alcanzar tus objetivos de negocio</p>
+            
+            <div class="contact-content">
+                <!-- Información de contacto directa -->
+                <div class="contact-info">
+                    <h3>John Alejandro Rodríguez Calle</h3>
+                    <p class="contact-role">Diseñador Gráfico Estratégico</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Teléfono:</strong>
+                            <a href="tel:+573202848056" class="contact-link">320 284 8056</a>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <a href="mailto:jhonrodriguez.huem@gmail.com" class="contact-link">jhonrodriguez.huem@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Redes sociales con íconos -->
+                    <div class="social-links">
+                        <h4>Conecta conmigo:</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-link facebook" aria-label="Facebook">
+                                <span class="social-icon">📘</span>
+                                <span class="social-text">Facebook</span>
+                            </a>
+                            <a href="https://wa.me/573202848056" class="social-link whatsapp" aria-label="WhatsApp">
+                                <span class="social-icon">💬</span>
+                                <span class="social-text">WhatsApp</span>
+                            </a>
+                            <a href="#" class="social-link instagram" aria-label="Instagram">
+                                <span class="social-icon">📷</span>
+                                <span class="social-text">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de contacto optimizado para conversión -->
+                <div class="contact-form">
+                    <form id="contactForm" class="form">
+                        <div class="form-header">
+                            <h3>Cuéntame sobre tu proyecto</h3>
+                            <p>Responde en menos de 24 horas</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required 
+                                   placeholder="Tu nombre completo">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="tu@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Describe tu proyecto *</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required 
+                                      placeholder="Cuéntame sobre tu marca, objetivos y cómo puedo ayudarte..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Enviar Mensaje
+                        </button>
+                        
+                        <p class="form-disclaimer">
+                            Al enviar este formulario, aceptas que me ponga en contacto contigo.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER - Información adicional y copyright -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>JR Design</h4>
+                    <p>Diseño gráfico estratégico que impulsa marcas</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#hero" class="footer-link">Inicio</a>
+                    <a href="#about" class="footer-link">Sobre Mí</a>
+                    <a href="#proyectos" class="footer-link">Proyectos</a>
+                    <a href="#contacto" class="footer-link">Contacto</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="footer-social-link" aria-label="Facebook">📘</a>
+                    <a href="https://wa.me/573202848056" class="footer-social-link" aria-label="WhatsApp">💬</a>
+                    <a href="#" class="footer-social-link" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 John Rodríguez – Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript principal -->
+    <script src="script.js"></script>
+</body>
+</html>
