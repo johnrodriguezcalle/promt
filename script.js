@@ -278,7 +278,7 @@ function initializeForm() {
 
 /**
  * Maneja el envío del formulario de contacto
- * Incluye validación completa y feedback profesional
+ * Incluye validación completa y envío real a Formspree
  */
 function handleFormSubmit(e) {
     e.preventDefault();
@@ -299,8 +299,8 @@ function handleFormSubmit(e) {
         return;
     }
     
-    // Simular envío exitoso
-    simulateFormSubmission(data);
+    // Enviar datos reales a Formspree
+    submitToFormspree(data);
 }
 
 /**
@@ -441,36 +441,55 @@ function showFormErrors(errors) {
 }
 
 /**
- * Simula el envío del formulario
- * Incluye feedback profesional y logging
+ * Envía los datos del formulario a Formspree
+ * Incluye manejo de respuestas y feedback profesional
  */
-function simulateFormSubmission(data) {
+function submitToFormspree(data) {
     // Mostrar estado de carga
     const submitButton = DOM.contactForm.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
     submitButton.textContent = 'Enviando...';
     submitButton.disabled = true;
     
-    // Simular delay de red
-    setTimeout(() => {
-        // Log del envío (requerimiento específico)
-        console.log('✅ Formulario de contacto enviado:', data.nombre, '-', data.email);
-        
-        // Mostrar mensaje de éxito
-        showSuccessMessage();
-        
-        // Limpiar formulario
-        DOM.contactForm.reset();
-        
-        // Restaurar botón
+    // Preparar datos para Formspree
+    const formData = new FormData();
+    formData.append('nombre', data.nombre);
+    formData.append('email', data.email);
+    formData.append('mensaje', data.mensaje);
+    
+    // Enviar a Formspree
+    fetch('https://formspree.io/f/xrbozkda', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Éxito
+            console.log('✅ Formulario enviado exitosamente a Formspree:', data.nombre, '-', data.email);
+            showSuccessMessage();
+            DOM.contactForm.reset();
+        } else {
+            // Error del servidor
+            throw new Error('Error del servidor: ' + response.status);
+        }
+    })
+    .catch(error => {
+        // Error de red o servidor
+        console.error('❌ Error enviando formulario:', error);
+        showErrorMessage('Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo o contáctame directamente.');
+    })
+    .finally(() => {
+        // Restaurar botón siempre
         submitButton.textContent = originalText;
         submitButton.disabled = false;
         
         // Limpiar errores
         const existingErrors = DOM.contactForm.querySelectorAll('.form-error, .field-error');
         existingErrors.forEach(error => error.remove());
-        
-    }, 1500);
+    });
 }
 
 /**
@@ -498,6 +517,33 @@ function showSuccessMessage() {
     setTimeout(() => {
         successDiv.remove();
     }, 5000);
+}
+
+/**
+ * Muestra mensaje de error del formulario
+ * Feedback claro para problemas de envío
+ */
+function showErrorMessage(message) {
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'form-error';
+    errorDiv.style.backgroundColor = '#f8d7da';
+    errorDiv.style.border = '1px solid #f5c6cb';
+    errorDiv.style.borderRadius = '8px';
+    errorDiv.style.padding = '1rem';
+    errorDiv.style.marginBottom = '1rem';
+    errorDiv.style.color = '#721c24';
+    errorDiv.style.textAlign = 'center';
+    errorDiv.innerHTML = `
+        <strong>Error al enviar mensaje</strong><br>
+        ${message}
+    `;
+    
+    DOM.contactForm.insertBefore(errorDiv, DOM.contactForm.firstChild);
+    
+    // Ocultar mensaje después de 8 segundos
+    setTimeout(() => {
+        errorDiv.remove();
+    }, 8000);
 }
 
 // ========================================
